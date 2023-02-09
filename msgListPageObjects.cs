@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace TestGmail.PageObjects
         }
         public sendMsg SendMessage()
         {
-            Thread.Sleep(1000);
+
+            WaitUntil.WaitElement(_webDriver, _sendButton);
             _webDriver.FindElement(_sendButton).Click();
             return new sendMsg(_webDriver);
 

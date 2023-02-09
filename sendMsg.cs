@@ -29,18 +29,18 @@ namespace TestGmail.PageObjects
 
         public sendMsg SendMessage()
         {
-            Thread.Sleep(1000);
+            WaitUntil.WaitElement(_webDriver, _toInput);
             _webDriver.FindElement(_toInput).SendKeys(_login2);
             _webDriver.FindElement(_subjectInput).SendKeys(subject);
-            // _webDriver.FindElement(_textInput).SendKeys(text);
+            // _webDriver.FindElement(_textInput).SendKeys(text);   // Не працює тег шукаю інший спосіб
             _webDriver.FindElement(_sendButton).Click();
             return new sendMsg(_webDriver);
         }
         public AuthorizationPageObjects Logout()
         {
-            Thread.Sleep(1000);
+            WaitUntil.WaitElement(_webDriver, _controlButton);
             _webDriver.FindElement(_controlButton).Click();
-            Thread.Sleep(1000);
+            WaitUntil.WaitElement(_webDriver, _logoutButton);
             _webDriver.FindElement(_logoutButton).Click();
 
             return new AuthorizationPageObjects(_webDriver);

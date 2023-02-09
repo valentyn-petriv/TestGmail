@@ -29,13 +29,13 @@ namespace TestGmail.PageObjects
         {
             _webDriver.FindElement(_loginInput).SendKeys(login);
             _webDriver.FindElement(_passwordInput).SendKeys(password);
-            Thread.Sleep(400);
+            //Thread.Sleep(400);
             _webDriver.FindElement(_continueButton).Click();
-            Thread.Sleep(1000);
+            WaitUntil.WaitElement(_webDriver, _loginUser);
             var actualLogin = _webDriver.FindElement(_loginUser).Text;
-            Thread.Sleep(1000);
+           // Thread.Sleep(1000);
             Assert.AreEqual(login, actualLogin, "login is wrong");
-            //Console.WriteLine("qqq");
+            
 ;            return new msgListPageObjects(_webDriver);
 
         }
