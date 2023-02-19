@@ -44,20 +44,12 @@ namespace TestGmail
 
 
         [Test]
-       /* public void Test2()
+        public void Test2()
         {
             var authorization = new AuthorizationPageObjects(driver);
-            authorization.Login(AuthorizationPageObjects._login, AuthorizationPageObjects._password);
-            var send = new msgListPageObjects(driver);
-            send.SendMessage();
+            authorization.negativTestLogin(UserData._login, GenerateData.RandomString(6));
 
-            var sendMsg = new sendMsg(driver);
-            sendMsg.SendMessage();
-            sendMsg.Logout();
-            Thread.Sleep(1000);
-            authorization.Login(AuthorizationPageObjects._login2, AuthorizationPageObjects._password);
-
-        }*/
+        }
 
         [TearDown]
         public void TearDown()

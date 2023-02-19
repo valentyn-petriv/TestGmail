@@ -1967,11 +1967,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj",
+      "projectUniqueName": "D:\\0Test\\GitTestGmail\\TestGmail\\TestGmail\\TestGmail\\TestGmail.csproj",
       "projectName": "TestGmail",
-      "projectPath": "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj",
+      "projectPath": "D:\\0Test\\GitTestGmail\\TestGmail\\TestGmail\\TestGmail\\TestGmail.csproj",
       "packagesPath": "C:\\Users\\valen\\.nuget\\packages\\",
-      "outputPath": "D:\\0Test\\TestGmail\\TestGmail\\obj\\",
+      "outputPath": "D:\\0Test\\GitTestGmail\\TestGmail\\TestGmail\\TestGmail\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\valen\\AppData\\Roaming\\NuGet\\NuGet.Config",
