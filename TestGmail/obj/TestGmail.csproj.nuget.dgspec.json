@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\0 Курси\\TestGmail\\TestGmail\\TestGmail.csproj": {}
+    "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj": {}
   },
   "projects": {
-    "D:\\0 Курси\\TestGmail\\TestGmail\\TestGmail.csproj": {
+    "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\0 Курси\\TestGmail\\TestGmail\\TestGmail.csproj",
+        "projectUniqueName": "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj",
         "projectName": "TestGmail",
-        "projectPath": "D:\\0 Курси\\TestGmail\\TestGmail\\TestGmail.csproj",
+        "projectPath": "D:\\0Test\\TestGmail\\TestGmail\\TestGmail.csproj",
         "packagesPath": "C:\\Users\\valen\\.nuget\\packages\\",
-        "outputPath": "D:\\0 Курси\\TestGmail\\TestGmail\\obj\\",
+        "outputPath": "D:\\0Test\\TestGmail\\TestGmail\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\valen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.16.1, )"
+              "version": "[4.3.1, )"
             },
             "Selenium.Chrome.WebDriver": {
               "target": "Package",
@@ -82,7 +82,7 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[109.0.5414.7400, )"
+              "version": "[110.0.5481.7700, )"
             },
             "Selenium.WebDriver.UndetectedChromeDriver": {
               "target": "Package",

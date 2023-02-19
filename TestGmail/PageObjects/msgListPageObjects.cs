@@ -13,9 +13,11 @@ namespace TestGmail.PageObjects
     class msgListPageObjects
     {
         private IWebDriver _webDriver;
+       // private string actualSubject;
         private readonly By _sendButton = By.XPath("//button[@class='button primary compose']");
         private readonly By _emailSubject = By.XPath("//a[@class='msglist__row_href']");
         private const string wrongSubject = "ththtrh";
+        private const string wrongSubjectException = "Subject is wrong"; 
 
         public msgListPageObjects(IWebDriver webDriver)
         {
@@ -32,25 +34,25 @@ namespace TestGmail.PageObjects
 
         public msgListPageObjects Email() 
             {
-            var actualSubject = _webDriver.FindElement(_emailSubject).Text;
-            Assert.AreEqual(sendMsg.subject, actualSubject, "subject is wrong");
+            WaitUntil.WaitElement(_webDriver, _emailSubject);
+            var actualSubject = _webDriver.FindElement(_emailSubject).Text;          
+            Assert.AreEqual(sendMsg.subject, actualSubject, wrongSubjectException);
             return new msgListPageObjects(_webDriver);
-            } 
-
-        public static string RandomString(int size, bool lowerCase)
-        {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
-            }
-            if (lowerCase)
-                return builder.ToString().ToLower();
-            return builder.ToString();
         }
+
+       /* public bool CheckSubject()
+        {
+            try
+            {
+              
+                
+                return true;    
+            }
+            catch(NoSuchElementException)
+            {
+                return false;
+            }
+        }*/
 
     }
 }

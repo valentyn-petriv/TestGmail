@@ -17,9 +17,6 @@ namespace TestGmail.PageObjects
        // private readonly By _textInput = By.XPath("//textarea[@class='mce-plaintext-area']");
         private readonly By _sendButton = By.XPath("//button[@class='button primary send']");
         public static string subject;
-       
-       
-        public const string text = "Hello";
         private readonly By _controlButton = By.XPath("//button[@class='login-button__control']");
         private readonly By _logoutButton = By.XPath("//a[@href='/q/logout']");
 

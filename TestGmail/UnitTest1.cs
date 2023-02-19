@@ -10,8 +10,8 @@ namespace TestGmail
     public class Tests
     {
         private IWebDriver driver;
-       
-       // private const string _ = "testeremail@ukr.net";
+
+         private const string URL = "https://accounts.ukr.net/login?lang=uk";
 
 
 
@@ -21,7 +21,7 @@ namespace TestGmail
      
             driver = new ChromeDriver("D:\\chromedriver_win32\\chromedriver");
            
-            driver.Navigate().GoToUrl("https://accounts.ukr.net/login?lang=uk");
+            driver.Navigate().GoToUrl(URL);
             driver.Manage().Window.Maximize();
             
         }
@@ -30,7 +30,7 @@ namespace TestGmail
         public void Test1()
         {
             var authorization = new AuthorizationPageObjects(driver);
-            authorization.Login(AuthorizationPageObjects._login, AuthorizationPageObjects._password);
+            authorization.Login(UserData._login, UserData._password);
             var send = new msgListPageObjects(driver);
             send.SendMessage();
 
@@ -38,13 +38,13 @@ namespace TestGmail
             sendMsg.SendMessage();
             sendMsg.Logout();
             Thread.Sleep(1000);
-            authorization.Login(AuthorizationPageObjects._login2, AuthorizationPageObjects._password);
-
+            authorization.Login(UserData._login2, UserData._password);
+            send.Email();
         }
 
 
         [Test]
-        public void Test2()
+       /* public void Test2()
         {
             var authorization = new AuthorizationPageObjects(driver);
             authorization.Login(AuthorizationPageObjects._login, AuthorizationPageObjects._password);
@@ -57,7 +57,7 @@ namespace TestGmail
             Thread.Sleep(1000);
             authorization.Login(AuthorizationPageObjects._login2, AuthorizationPageObjects._password);
 
-        }
+        }*/
 
         [TearDown]
         public void TearDown()
